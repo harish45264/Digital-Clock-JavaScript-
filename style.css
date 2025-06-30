@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s ease;
+}
+
+.clock-container {
+  padding: 40px 60px;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+/* Light Mode */
+body.light {
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+}
+
+body.light .clock-container {
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+body.light #clock,
+body.light #date {
+  color: #333333;
+}
+
+/* Dark Mode */
+body.dark {
+  background: linear-gradient(to right, #232526, #414345);
+}
+
+body.dark .clock-container {
+  background: #1e1e1e;
+  box-shadow: 0 0 30px rgba(0, 255, 204, 0.3);
+  border: 1px solid #00ffcc22;
+}
+
+body.dark #clock,
+body.dark #date {
+  color: #00ffcc;
+}
+
+/* Clock Text */
+#clock {
+  font-size: 4rem;
+  letter-spacing: 6px;
+  margin-bottom: 10px;
+}
+
+#date {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+#toggleBtn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #ddd;
+  transition: background 0.3s ease;
+}
+
+body.dark #toggleBtn {
+  background-color: #00ffcc;
+  color: #000;
+}
